@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <!-- テスト -->
+
 <body>
   <header>
     <div class="header_inner">
@@ -108,109 +109,29 @@
 
 
   <main>
+
+
     <section class="top-container_01">
+
       <div class="container_item" id="int_box">
-        <div class="inner">
-          <a href="">
-            <h2>はじめに</h2>
-          </a>
-          <ul>
-            <li>
-              <a href="">
-                <span>ハートリンクについて</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span>ハートリンクだからできること</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span>私たちの想い</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span>不動産仲介について</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <a href="" class="item-text">はじめに</a>
       </div>
+
       <div class="container_item" id="work_box">
-        <div class="inner">
-          <a href="">
-            <h2>仕事を知る</h2>
-          </a>
-          <ul>
-            <li>
-              <a href="">
-                <span>売買仲介</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span>賃貸仲介</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span>不動産開発</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span>一週間の仕事の流れ</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <a href="" class="item-text">仕事を知る</a>
       </div>
+
       <div class="container_item" id="human_box">
-        <div class="inner">
-          <a href="">
-            <h2>人を知る</h2>
-          </a>
-          <ul>
-            <li>
-              <a href="">
-                <span>社員インタビュー</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span>座談会</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <a href="" class="item-text">人を知る</a>
       </div>
+
       <div class="container_item" id="career_box">
-        <div class="inner">
-          <a href="">
-            <h2>キャリアを知る</h2>
-          </a>
-          <ul>
-            <li>
-              <a href="">
-                <span>キャリアサポート</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span>教育・研修</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span>福利厚生</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <a href="" class="item-text">キャリアを知る</a>
       </div>
+
     </section>
+
+
     <section class="top-container_02">
       <div class="container_title">
         <h2>採用情報</h2>
@@ -278,62 +199,37 @@
       $('.header_inner').toggleClass('is-active');
     });
 
+
     $("#int_box").mouseover(function () {
-      $(".top-container_01").fadeOut(300, function () {
-        $(this).css("background-image", "url(images/content_01.jpeg)");
-        $(this).fadeIn(800)
-      });
+      $(".top-container_01").addClass('int-active');
     });
 
-    
     $("#int_box").mouseleave(function () {
-      $(".top-container_01").fadeOut(300, function () {
-        $(this).css("background-image", "url(images/31188065_l.jpg)");
-        $(this).fadeIn(800)
-      });
+      $(".top-container_01").removeClass('int-active');
     });
 
-    $("#work_box").mouseover(function () {
-      $(".top-container_01").fadeOut(300, function () {
-        $(this).css("background-image", "url(images/content_02.png)");
-        $(this).fadeIn(800)
-      });
+     $("#work_box").mouseover(function () {
+      $(".top-container_01").addClass('work-active');
     });
 
     $("#work_box").mouseleave(function () {
-      $(".top-container_01").fadeOut(300, function () {
-        $(this).css("background-image", "url(images/31188065_l.jpg)");
-        $(this).fadeIn(800)
-      });
+      $(".top-container_01").removeClass('work-active');
     });
-
-
-    $("#human_box").mouseover(function () {
-      $(".top-container_01").fadeOut(300, function () {
-        $(this).css("background-image", "url(images/29892064_l.jpg)");
-        $(this).fadeIn(800)
-      });
+  
+     $("#human_box").mouseover(function () {
+      $(".top-container_01").addClass('human-active');
     });
 
     $("#human_box").mouseleave(function () {
-      $(".top-container_01").fadeOut(300, function () {
-        $(this).css("background-image", "url(images/31188065_l.jpg)");
-        $(this).fadeIn(800)
-      });
+      $(".top-container_01").removeClass('human-active');
     });
 
-    $("#career_box").mouseover(function () {
-      $(".top-container_01").fadeOut(300, function () {
-        $(this).css("background-image", "url(images/content04.jpeg)");
-        $(this).fadeIn(800)
-      });
+     $("#career_box").mouseover(function () {
+      $(".top-container_01").addClass('career-active');
     });
 
     $("#career_box").mouseleave(function () {
-      $(".top-container_01").fadeOut(300, function () {
-        $(this).css("background-image", "url(images/31188065_l.jpg)");
-        $(this).fadeIn(800)
-      });
+      $(".top-container_01").removeClass('career-active');
     });
 
   </script>
