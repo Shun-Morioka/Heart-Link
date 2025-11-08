@@ -269,13 +269,14 @@
         console: false,
       });
     });
-    $(".burger").click(function () {
-      $(".burger").toggleClass("is-active")
-      $(".menu_wrapper").toggleClass("is-active")
-      $(".fst_view, main, footer, .bx-viewport").toggleClass("hide")
-      $("")
-    });
 
+    $(".burger").click(function () {
+      $(".burger").toggleClass("is-active");
+      $(".menu_wrapper").toggleClass("is-active");
+      $(".fst_view, main, footer, .bx-viewport").toggleClass("hide");
+      $('header, .header_logo, .gnav_txt, .header-entry_txt').toggleClass('is-active');
+      $('.header_inner').toggleClass('is-active');
+    });
 
     $("#int_box").mouseover(function () {
       $(".top-container_01").fadeOut(300, function () {
