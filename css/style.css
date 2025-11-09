@@ -17,29 +17,52 @@ header {
   top: 0px;
   left: 0px;
   width: 100%;
+  height: 11rem;
   z-index: 10;
   border-bottom: 1px solid #ffffff;
 }
 
+header.is-active {
+  border-bottom: 1px solid #e6e6e6;
+}
+
 .header_inner {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0 8rem;
+  max-width: 100%;
+}
+
+.header_inner.is-active {
+  margin-right: 1.5rem;
 }
 
 .header_logo {
   background-color: #fff;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+}
+
+.header_logo.is-active {
+  border: #00708E solid 1px;
   border-radius: 2rem;
 }
 
 .header_logo img {
   margin: 1rem;
 }
+
 .g_nav {
+  display: block;
+  height: 100%;
   margin: 0 .5rem;
 }
+
 .gnav_list {
   display: flex;
+  height: auto;
+  gap: 2rem;
   color: #fff;
 }
 
@@ -60,6 +83,12 @@ header {
 
 .gnav_txt {
   font-size: 1.4rem;
+  font-weight: 600;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.gnav_txt.is-active {
+  color: #00708E;
 }
 
 .header_contact {
@@ -71,6 +100,8 @@ header {
   display: flex;
   justify-content: space-between;
   color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+
 }
 
 .header-entry_buttom {
@@ -78,6 +109,7 @@ header {
   width: 18rem;
   text-align: center;
   transition: 0.3s;
+
 }
 
 .header-entry_buttom:hover {
@@ -95,7 +127,13 @@ header {
   align-items: center;
   justify-content: center;
   height: 100%;
-  font-size: 1.6rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-entry_txt.is-active {
+  color: #00708E;
 }
 
 .nav_toggle {
@@ -217,7 +255,8 @@ header {
   height: auto;
 }
 
-.bx-prev, .bx-next {
+.bx-prev,
+.bx-next {
   display: none !important;
 }
 
@@ -225,14 +264,39 @@ header {
 /* ここらかメイン */
 .top-container_01 {
   display: flex;
+  height: 70rem;
   justify-content: space-between;
   align-items: stretch;
   text-align: center;
-  background-image: url("../images/31188065_l.jpg");
+  background-image: url("../images/main-img.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: 0.5s;
 }
+
+.top-container_01.int-active {
+  background-image: url("../images/int-img.webp");
+  transition: 0.5s;
+}
+
+.top-container_01.work-active {
+  background-image: url("../images/work-img.webp");
+  transition: 0.5s;
+}
+
+.top-container_01.human-active {
+  background-image: url("../images/human-img.webp");
+  transition: 0.5s;
+}
+
+.top-container_01.career-active {
+  background-image: url("../images/career-img.webp");
+  transition: 0.5s;
+}
+
+
+
 
 
 .container_item {
@@ -250,15 +314,18 @@ header {
   color: #fff;
 }
 
-.container_item .inner {
-  margin: 7rem;
-  padding: 25rem 0;
+.container_item .item-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #fff;
 }
 
 
-.top-container_01 span {
-  display: none;
-}
+
 
 
 /* ここから採用情報 */
